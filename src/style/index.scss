@@ -1,0 +1,143 @@
+$color-red: rgb(255, 20, 20);
+$color-black:rgba(25,25,25,255);
+$color-pink: #d20a32;
+
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/Lato-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "LatoB";
+  src: url("../assets/Lato-Bold.ttf") format("truetype");
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-center{
+  justify-content: center;
+  align-items: center;
+}
+
+
+*{
+  font-family: 'Lato';
+}
+
+.color-pink, h1 {
+  color: $color-pink;
+}
+
+h1{
+  font-size: 50px;
+
+}
+
+body{
+  background-color: $color-black;
+  color: white;
+  padding: 0 20px;
+}
+
+.back{
+ width: 100%;
+ height: 800px;
+}
+
+.title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-d{
+  font-size: 40px;
+}
+.short-desc{
+  font-size: 20px;
+}
+
+
+.rating{
+  color: $color-pink;
+  font-size: 30px;
+  font-family: 'LatoB'
+}
+
+.head{
+  @include flex-row();
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 0 30px;
+}
+
+input{
+  background-color:$color-black;
+  border: 0;
+  width: 400px;
+  color: white;
+  font-size: 16px;
+}
+
+.intro-txt{
+  font-size: 30px;
+  text-align: justify;
+}
+
+.cardGame{
+  margin: 20px;
+
+}
+
+.cardGame > img{
+
+  width: 100%;
+  height: 80%;
+}
+
+.articles{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(x, 1fr);
+}
+
+.game-name{
+  color: white;
+  font-size: 30px;
+  font-family: 'LatoB';
+}
+
+.title-s{
+  font-size: 30px;
+}
+
+.description, .dev, .platforms, .release, .publiser, .genre, .tags, .buy-txt{
+  font-size: 20px;
+}
+
+.shot-info{
+  @include flex-row();
+  justify-content: space-between;
+}
+
+.article{
+  padding-right: 30px;
+}
+
+* a {
+  text-decoration: none;
+  color: white;
+}
+
